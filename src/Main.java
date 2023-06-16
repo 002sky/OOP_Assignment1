@@ -9,13 +9,10 @@ public class Main {
         //create the BudgetCalculator object and the scanner object
         BudgetCalculator BG = new BudgetCalculator();
         Scanner keyboard = new Scanner(System.in);
-
-
         //a while loop for continue the program if there is a wrong input from user
         while (true) {
             //try catch
             try {
-
                 System.out.print("Enter Your Age: ");
                 int age = keyboard.nextInt();
                 BG.setAge(age);
@@ -23,9 +20,7 @@ public class Main {
                 String isMarried;
                 do {
                     System.out.println("Have You Married? (Yes/No)");
-
                     isMarried = keyboard.nextLine();
-
                 } while (CheckYesNO(isMarried));
 
                 BG.setIsMarried(isMarried.toLowerCase().matches("yes"));
@@ -45,7 +40,6 @@ public class Main {
                         BG.setNoOfDependent(NoOfDependents);
                         keyboard.nextLine();
                     } while (NoOfDependents <= 0);
-
 
                 } else {
                     BG.setHasDependent(false);
@@ -76,7 +70,6 @@ public class Main {
                 keyboard.next();
             }
         }
-
         BG.displayMessage();
     }
 

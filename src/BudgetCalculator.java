@@ -170,16 +170,13 @@ public class BudgetCalculator {
             }
         }
     }
-
     public void cmpTheExpenses() {
-
         //get the user category from the findUserCategory function
         String userCategory = findUserCategory();
         //get the suggested expenses budget from the hashmap
         double UserCategoryExpenses = JohorBudget.get(userCategory);
         //calculate the total expenses of the user
         double totalUserExpense = needs + wants;
-
 
         //print out
         System.out.println("You are belong to: " + userCategory + "and the suggested expenses is: " + UserCategoryExpenses);
